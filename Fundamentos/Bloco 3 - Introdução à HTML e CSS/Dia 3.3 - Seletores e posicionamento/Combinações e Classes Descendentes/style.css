@@ -1,0 +1,12 @@
+ol {
+    background-color: yellow;
+}
+
+ol.verde li:nth-child(even) {
+    color: green;
+}
+
+ol.verde li:nth-child(odd) {
+    text-transform: uppercase;
+}
+
