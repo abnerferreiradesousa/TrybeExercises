@@ -35,3 +35,27 @@ ol.verde li {
     background-color: pink;
 }
 
+li:hover {
+    font-weight: bold;  
+}
+
+.stack {
+    color: orange;
+}
+
+.tryschoo {
+    color: green;
+}
+
+.mdn {
+    color: black;
+}
+ .dev {
+     color: yellow;
+ }
+
+ a {
+     text-decoration:none;
+ }
+
+ 
