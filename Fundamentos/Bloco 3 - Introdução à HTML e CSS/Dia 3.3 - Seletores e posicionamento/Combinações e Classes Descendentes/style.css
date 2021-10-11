@@ -27,14 +27,6 @@ ol.verde li {
     font-weight: bold;
 }
 
-.language {
-    color: blue;
-}
-
-.javapink {
-    background-color: pink;
-}
-
 li:hover {
     font-weight: bold;  
 }
@@ -58,4 +50,11 @@ li:hover {
      text-decoration:none;
  }
 
- 
+
+ #linguagens li:not(:nth-child(n + 4)) {
+    color: blue;
+ }
+
+ .pink {
+     background-color: pink;
+ }
