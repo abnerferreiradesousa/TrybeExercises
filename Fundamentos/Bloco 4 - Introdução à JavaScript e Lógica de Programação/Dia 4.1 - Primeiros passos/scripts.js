@@ -98,24 +98,35 @@
 
 // 7. Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 
-const notaPercentual = 101;
-const regra = notaPercentual > 0 && notaPercentual <= 100;
+// const notaPercentual = 101;
+// const regra = notaPercentual > 0 && notaPercentual <= 100;
 
- if(regra) {
-     if(notaPercentual >= 90) {
-        console.log("Nota convertida: A");
-    } else if(notaPercentual >= 80) {
-        console.log("Nota convertida: B");
-    } else if(notaPercentual >= 70) {
-        console.log("Nota convertida: C");
-    } else if(notaPercentual >= 60) {
-        console.log("Nota convertida: D");
-    } else if(notaPercentual >= 50) {
-        console.log("Nota convertida: E");
-    } else {
-        console.log("Nota convertida: F");
-    };
- } else {
-     console.log("ERRO: Encerrando programa")
- }
+//  if(regra) {
+//      if(notaPercentual >= 90) {
+//         console.log("Nota convertida: A");
+//     } else if(notaPercentual >= 80) {
+//         console.log("Nota convertida: B");
+//     } else if(notaPercentual >= 70) {
+//         console.log("Nota convertida: C");
+//     } else if(notaPercentual >= 60) {
+//         console.log("Nota convertida: D");
+//     } else if(notaPercentual >= 50) {
+//         console.log("Nota convertida: E");
+//     } else {
+//         console.log("Nota convertida: F");
+//     };
+//  } else {
+//      console.log("ERRO: Encerrando programa")
+//  }
  
+// 8. Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
+
+const a = 11;
+const b = 15;
+const c = 17;
+
+if(a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+    console.log(true);
+} else {
+    console.log(false);
+}
