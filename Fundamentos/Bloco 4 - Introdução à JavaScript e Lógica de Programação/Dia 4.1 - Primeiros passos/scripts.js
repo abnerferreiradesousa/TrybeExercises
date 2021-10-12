@@ -21,7 +21,7 @@
 // console.log("São o mesmo valor");
 // } 
 
-// Faça um programa que retorne o maior de três números. Defina no começo do programa três constantes com os valores que serão comparados.
+// 3. Faça um programa que retorne o maior de três números. Defina no começo do programa três constantes com os valores que serão comparados.
 
 // const a = 10;
 // const b = 20;
@@ -37,14 +37,61 @@
 //     console.log("São iguais");
 // }
 
-// Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+// 4. Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
 
-const a = 0;
+// const a = -1;
 
-if(a > 0) {
-    console.log("positive");
-} else if(a < 0) {
-    console.log("negative");
-} else {
-    console.log("zero");
-}
+// if(a > 0) {
+//     console.log("positive");
+// } else if(a < 0) {
+//     console.log("negative");
+// } else {
+//     console.log("zero");
+// }
+
+// 5. Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
+
+// const anguloA = 40;
+// const anguloB = 100;
+// const anguloC = 40;
+
+// let somaDosAngulos = anguloA + anguloB + anguloC;
+// let maiorQueZero = anguloA > 0 && anguloB > 0 && anguloC > 0; 
+
+// if(maiorQueZero) {
+//     if(somaDosAngulos === 180) {
+//         console.log(true);
+//     } else {
+//         console.log(false);
+//     };
+// } else {
+//     console.log("ERRO: Um dos angulos é menor que zero.");
+// }
+
+// 6. Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+
+// const peca = "rainha";
+
+// switch (peca.toUpperCase()) {
+//     case 'TORRE':
+//       console.log("Torre - Move-se em linha rreta horizontalmente e verticalmente");
+//       break;
+//     case "BISPO":
+//       console.log("Bispo - Move-se nas diagonais");
+//       break;
+//     case "RAINHA":
+//       console.log("Rainha - Diagonal, horizontal e vertical");
+//       break;
+//     case "PEÃO": 
+//       console.log("Peão - Para frente, uma casa vez");
+//       break;
+//     case "REI":
+//       console.log("Rei - Qualquer direção adjacente");
+//       break;
+//     case "CAVALO": 
+//       console.log("Cavalo - pode pular sobre casas na diagonal e na frente");
+//       break;
+//     default:
+//       console.log("ERRO: Não é uma peça de Xadrez");
+//       break;
+// }
