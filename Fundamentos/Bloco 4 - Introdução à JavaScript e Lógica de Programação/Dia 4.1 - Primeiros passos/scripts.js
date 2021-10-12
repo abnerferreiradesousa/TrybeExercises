@@ -95,3 +95,27 @@
 //       console.log("ERRO: Não é uma peça de Xadrez");
 //       break;
 // }
+
+// 7. Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+
+const notaPercentual = 101;
+const regra = notaPercentual > 0 && notaPercentual <= 100;
+
+ if(regra) {
+     if(notaPercentual >= 90) {
+        console.log("Nota convertida: A");
+    } else if(notaPercentual >= 80) {
+        console.log("Nota convertida: B");
+    } else if(notaPercentual >= 70) {
+        console.log("Nota convertida: C");
+    } else if(notaPercentual >= 60) {
+        console.log("Nota convertida: D");
+    } else if(notaPercentual >= 50) {
+        console.log("Nota convertida: E");
+    } else {
+        console.log("Nota convertida: F");
+    };
+ } else {
+     console.log("ERRO: Encerrando programa")
+ }
+ 
