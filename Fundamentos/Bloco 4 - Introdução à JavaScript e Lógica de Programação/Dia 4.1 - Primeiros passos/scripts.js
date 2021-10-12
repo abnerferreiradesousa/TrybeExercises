@@ -121,11 +121,23 @@
  
 // 8. Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
 
-const a = 11;
-const b = 15;
-const c = 17;
+// const a = 11;
+// const b = 15;
+// const c = 17;
 
-if(a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+// if(a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
+
+// 9. Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
+
+const a = 10;
+const b = 21;
+const c = 2;
+
+if(a % 2 === 1 || b % 2 === 1 || c % 2 === 1) {
     console.log(true);
 } else {
     console.log(false);
