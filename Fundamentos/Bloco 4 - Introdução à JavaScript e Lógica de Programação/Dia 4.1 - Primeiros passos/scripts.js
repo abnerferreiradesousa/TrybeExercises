@@ -176,18 +176,24 @@
 
 //MÉTODO 2
 
-const salarioBruto = 6000.00;
+const salarioBruto = 1600.00;
 //INSS
 
 if(salarioBruto <= 1556.94) {
     let inss = salarioBruto * 0.08;
     let salarioBase = salarioBruto - inss;
-    console.log(salarioBase);
+    console.log("Salário bruto com desconto do INSS: " + salarioBase); 
+    if(salarioBase <= 1903.98) {
+        console.log("Até R$ 1.903,98: isento de imposto de renda");
+    }
 } else if(salarioBruto <= 2594.92) {
     let inss = salarioBruto * 0.09;
     let salarioBase = salarioBruto - inss;
     console.log("Salário bruto com desconto do INSS: " + salarioBase);
-    if(salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+    if(salarioBase <= 1903.98) {
+        console.log("Até R$ 1.903,98: isento de imposto de renda");
+    }
+    else if(salarioBase >= 1903.99 && salarioBase <= 2826.65) {
         let ir = (salarioBase * 0.075) - 142.80;
         let salarioLiquido = salarioBase - ir;
         console.log("Salário base com desconto do IR: " + salarioLiquido);
