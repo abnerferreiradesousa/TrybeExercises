@@ -99,7 +99,7 @@
 // 7. Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 
 // const notaPercentual = 101;
-// const regra = notaPercentual > 0 && notaPercentual <= 100;
+// const regra = notaPercentual > 0 || notaPercentual <= 100;
 
 //  if(regra) {
 //      if(notaPercentual >= 90) {
@@ -133,12 +133,93 @@
 
 // 9. Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
 
-const a = 10;
-const b = 21;
-const c = 2;
+// const a = 10;
+// const b = 21;
+// const c = 2;
 
-if(a % 2 === 1 || b % 2 === 1 || c % 2 === 1) {
-    console.log(true);
-} else {
-    console.log(false);
+// if(a % 2 === 1 || b % 2 === 1 || c % 2 === 1) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
+
+// 10. Escreva um programa que se inicie com dois valores em duas constantes diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+
+// const custoDoProduto = 5;
+// const precoDoProduto = 20;
+
+// if(custoDoProduto >= 0 && precoDoProduto >= 0) {
+//     const custoTotal = custoDoProduto + 2;
+//     const lucroTotal = (precoDoProduto - custoTotal) * 1000;
+//     console.log(lucroTotal);
+// } else {
+//     console.log("Os valores podem ser negativos");
+// };
+   
+// 11. Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+
+//MÉTODO 1
+
+//INSS
+
+// const salarioBruto = 5100.00;
+// let inss = salarioBruto * 0.11;
+// let salarioBase = salarioBruto - inss;
+// console.log(salarioBase);
+
+//IMPOSTO DE RENDA
+
+// let ir = (salarioBase * 0.15) - 354.80;
+// let salarioLiquido = salarioBase - ir;
+// console.log(salarioLiquido);
+// console.log(ir);
+
+//MÉTODO 2
+
+const salarioBruto = 6000.00;
+//INSS
+
+if(salarioBruto <= 1556.94) {
+    let inss = salarioBruto * 0.08;
+    let salarioBase = salarioBruto - inss;
+    console.log(salarioBase);
+} else if(salarioBruto <= 2594.92) {
+    let inss = salarioBruto * 0.09;
+    let salarioBase = salarioBruto - inss;
+    console.log("Salário bruto com desconto do INSS: " + salarioBase);
+    if(salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+        let ir = (salarioBase * 0.075) - 142.80;
+        let salarioLiquido = salarioBase - ir;
+        console.log("Salário base com desconto do IR: " + salarioLiquido);
+    }
+} else if(salarioBruto <= 5189.92) {
+    let inss = salarioBruto * 0.11;
+    let salarioBase = salarioBruto - inss;
+    console.log("Salário bruto com desconto do INSS: " + salarioBase);
+    if(salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+        let ir = (salarioBase * 0.075) - 142.80;
+        let salarioLiquido = salarioBase - ir;
+        console.log("Salário base com desconto do IR: " + salarioLiquido);
+    } else if(salarioBase >= 2826.66 && salarioBase <= 3751.05) {
+        let ir = (salarioBase * 0.15) - 354.80;
+        let salarioLiquido = salarioBase - ir;
+        console.log("Salário base com desconto do IR: " + salarioLiquido);
+    } else if(salarioBase >= 3751.06 && salarioBase <= 4664.64) {
+        let ir = (salarioBase * 0.225) - 636.13;
+        let salarioLiquido = salarioBase - ir;
+        console.log("Salário base com desconto do IR: " + salarioLiquido);
+    } else if(salarioBase <= 4664.68) {
+        let ir = (salarioBase * 0.275) - 869.36;
+        let salarioLiquido = salarioBase - ir;
+        console.log("Salário base com desconto do IR: " + salarioLiquido);
+    }
+} else if(salarioBruto > 5189.92) {
+    let inss = 570.88;
+    let salarioBase = salarioBruto - inss;
+    console.log("Salário bruto com desconto do INSS: " + salarioBase);
+    if(salarioBase > 4664.69) {
+        let ir = (salarioBase * 0.275) - 869.36;
+        let salarioLiquido = salarioBase - ir;
+        console.log("Salário base com desconto do IR: " + salarioLiquido);
+    }
 }
