@@ -37,7 +37,7 @@
 // let mediaAritmetica = 0;
 
 // for(let indice = 0; indice < numbers.length; indice += 1) {
-//     soma = soma + numbers[indice];
+//     soma = soma + numbers[indice];                     
 //     mediaAritmetica = soma / numbers.length;
 // }
 // console.log(mediaAritmetica);
@@ -118,3 +118,23 @@
 //     novissimoArray.push(novoArray[indice] / 2);
 // }
 // console.log(novissimoArray);
+
+//BÔNUS        
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+// 1. Ordene o array numbers em ordem crescente e imprima seus valores;
+
+// function compararNumeros(a, b) {
+//     return a - b;
+// }
+
+// console.log(numbers.sort(compararNumeros));
+
+// 2. Ordene o array numbers em ordem decrescente e imprima seus valores;
+
+// function compararNumeros(a, b) {
+//     return b - a;
+// }
+
+// console.log(numbers.sort(compararNumeros));
+
