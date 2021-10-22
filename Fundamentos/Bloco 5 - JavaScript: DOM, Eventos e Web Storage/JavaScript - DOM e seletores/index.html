@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título <strong>Principal</strong></h2>
+      <p id="paragraph" class="two">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="two">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.querySelector("#paragraph");
+      paragraph.style.color = "red";
+
+//Recupere o elemento que contém o título da página e faça algo com ele, como alterá-lo para o nome do seu filme favorito.
+      
+      document.querySelector("#page-title").innerText = "Esquadrão Suicida";
+
+//Agora recupere o segundo parágrafo e use sua criatividade para alterá-lo.
+      
+      document.querySelector("#second-paragraph").style.border = "2px solid blue";
+
+//Por fim, recupere o subtítulo e altere-o também.
+
+      document.querySelector("#second-paragraph").style.padding = "10px";
+
+//Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName ;
+    
+      const twoParagraph = document.querySelectorAll(".two");
+      console.log(twoParagraph);
+
+//Altere algum estilo do primeiro deles.
+     
+      twoParagraph[0].innerText = "Quero aprender e evoluir na minha área profissional"
+      twoParagraph[0].style.fontSize = "18px"
+
+//Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName .
+
+//Nessa questão o getElementsByTagName reclamou da ausência de um índice[0] no código de estilização. Já o querySelector reclamou da ultilização do mesmo. Sendo assim, tive que remover para a estilização rodar na página. Isso porque o ...TagName retorna uma lista de elemento(s), e o querySelector retorna um elemento.
+      
+const corDoH4 = document.querySelector("h4");
+      console.log(corDoH4);
+      corDoH4.style.fontSize = "20px";
+      corDoH4.style.backgroundColor = "blue"
+      corDoH4.style.padding = "50px"
+
+    </script>
+  </body>
+</html>

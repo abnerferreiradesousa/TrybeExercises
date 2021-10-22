@@ -130,6 +130,22 @@
 
 // console.log(numbers.sort(compararNumeros));
 
+//RESPOSTA ALTERNATIVA 
+    //INDICE   0  1  2  3   4   5  6    7  8   9
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+// for (let index = 1; index < numbers.length; index += 1) {
+//   for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//     if (numbers[index] < numbers[secondIndex]) {
+//       let position = numbers[index];
+//       numbers[index] = numbers[secondIndex];
+//       numbers[secondIndex] = position;
+//     }
+//   }
+// }
+
+// console.log(numbers);
+
 // 2. Ordene o array numbers em ordem decrescente e imprima seus valores;
 
 // function compararNumeros(a, b) {
@@ -143,14 +159,14 @@
 // [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54]
 
 
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let newArr = [];
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let newArr = [];
 
-for(let index = 0; index < numbers.length; index += 1) {
-    if(index + 1 < numbers.length) {
-        newArr.push(numbers[index] * numbers[index + 1]);
-    } else {
-        newArr.push(numbers[index] * 2);
-    }
-}
-console.log(newArr);
+// for(let index = 0; index < numbers.length; index += 1) {
+//     if(index + 1 < numbers.length) {
+//         newArr.push(numbers[index] * numbers[index + 1]);
+//     } else {
+//         newArr.push(numbers[index] * 2);
+//     }
+// }
+// console.log(newArr);
