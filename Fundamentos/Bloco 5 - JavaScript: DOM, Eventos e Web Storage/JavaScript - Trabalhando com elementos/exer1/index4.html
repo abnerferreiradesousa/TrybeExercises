@@ -50,8 +50,36 @@
             }
             //TEM COMO EU PERCORRER UM ARRAY DE ELEMENTOS E IDENTIFICAR O ID QUE EU BUSCO?
 
+//1. Crie um irmão para elementoOndeVoceEsta .
+            let pai = document.querySelector('#pai');
+            
+            let createSect = document.createElement('section');
+            createSect.id = 'irmãoDoElementoOndeVcEsta';
+            pai.appendChild(createSect);
 
-        </script>
+//2. Crie um filho para elementoOndeVoceEsta .
+            let ondeEstou = document.querySelector('#elementoOndeVoceEsta')
+
+            let createChild = document.createElement('section');
+            createChild.id = 'terceirofilhoDoFilho';
+            ondeEstou.appendChild(createChild);
+
+//3. Crie um filho para primeiroFilhoDoFilho .
+            let bisneto = document.querySelector('#primeiroFilhoDoFilho');
+
+            let createBisneto = document.createElement('section');
+            createBisneto.id = 'bisneto';
+      
+            bisneto.appendChild(createBisneto);
+
+//4. A partir desse filho criado, acesse terceiroFilho .
+            let getBisneto = document.querySelector('#bisneto');
+            
+            console.log(getBisneto.parentNode.parentNode.parentNode.lastChild.previousElementSibling.previousElementSibling.previousElementSibling);
+
+//5. Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+      
+         </script>
       </main>
 </body>
 </html>
