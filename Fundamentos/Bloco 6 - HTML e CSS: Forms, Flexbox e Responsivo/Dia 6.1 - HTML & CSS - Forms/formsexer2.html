@@ -12,66 +12,99 @@
       <p>Preencha os campos abaixo.</p>
     </header>
     <main>
-   <form action="" method="get">
-    <fieldset>
-      <legend>Dados pessoais</legend>
-      <label for="fname">Nome:</label>
-      <input type="text" id="fname" name="fname" required maxlength="40" />
+      <form action="" method="get">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+          <label for="fname">Nome:</label>
+          <input type="text" id="fname" name="fname" required maxlength="40" />
 
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required maxlength="50" />
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required maxlength="50" />
 
-      <label for="cpf">CPF:</label>
-      <input type="text" id="cpf" name="cpf" required maxlength="11" />
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" required maxlength="11" />
 
-      <label for="address">Endereço:</label>
-      <input type="text" id="address" name="address" required maxlength="200" />
+          <label for="address">Endereço:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            required
+            maxlength="200"
+          />
 
-      <label for="city">Cidade:</label>
-      <input type="text" id="city" name="city" maxlength="28" required />
+          <label for="city">Cidade:</label>
+          <input type="text" id="city" name="city" maxlength="28" required />
 
-      <label for="state">Estado:</label>
-      <select name="state" id="state" required>
-        <option disabled selected value>Selecione seu estado</option>
-      </select>
-      <label for="home-option1">Tipo de imóvel:</label>
-      <input
-        type="radio"
-        id="home-option1"
-        name="home"
-        value="house"
-        required
-      /><span>Casa</span>
+          <label for="state">Estado:</label>
+          <select name="state" id="state" required>
+            <option disabled selected value>Selecione seu estado</option>
+          </select>
+          <label for="home-option1">Tipo de imóvel:</label>
+          <input
+            type="radio"
+            id="home-option1"
+            name="home"
+            value="house"
+            required
+          /><span>Casa</span>
 
-     
-      <input
-        type="radio"
-        id="home-option2"
-        name="home"
-        value="Apartment"
-        required
-      /><span>Apartamento</span>
-    </fieldset>
+          <input
+            type="radio"
+            id="home-option2"
+            name="home"
+            value="Apartment"
+            required
+          /><span>Apartamento</span>
+        </fieldset>
 
-    <fieldset>
-      <legend>Dados do seu último emprego</legend>
-      <textarea name="" id="" cols="150" rows="10" maxlength="1000" required>Resumo do currículo</textarea>
-      <label for="occupation">Cargo</label>
-      <input type="text" id="occupation" name="occupation" maxlength="40" required>
+        <fieldset>
+          <legend>Dados do seu último emprego</legend>
+          <textarea
+            name=""
+            id=""
+            cols="150"
+            rows="10"
+            maxlength="1000"
+            required
+          >
+Resumo do currículo</textarea
+          >
+          <label for="occupation">Cargo</label>
+          <input
+            type="text"
+            id="occupation"
+            name="occupation"
+            maxlength="40"
+            required
+          />
 
-      <label for="description-job">Descrição do cargo:</label>
-      <input type="text" id="description-job" name="description-job" maxlength="500" required>
+          <label for="description-job">Descrição do cargo:</label>
+          <input
+            type="text"
+            id="description-job"
+            name="description-job"
+            maxlength="500"
+            required
+          />
 
-      <label for="date">Data de início:</label>
-      <input type="text" id="date" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" value="data-start" required>
+          <label for="date">Data de início:</label>
+          <input
+            type="text"
+            id="date"
+            pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+            value=""
+            placeholder="dd/mm/yyyy"
+            required
+          />
 
-      <input type="submit">
-      <button type="reset">Limpar</button>
-      <!-- <input type="button" onclick="alert('Hello World!')" value="Click Me!"> -->
-    </fieldset>
-  </form>
-</main>
-  <section class="form-data"></section>
+          <input type="submit" />
+          <button type="reset">Limpar</button>
+          <!-- <input type="button" onclick="alert('Hello World!')" value="Click Me!"> -->
+        </fieldset>
+      </form>
+    </main>
+    <section class="form-data"></section>
   </body>
   <script src="script.js"></script>
 </html>

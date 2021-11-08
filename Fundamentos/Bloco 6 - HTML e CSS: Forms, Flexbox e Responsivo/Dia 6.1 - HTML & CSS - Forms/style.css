@@ -1,0 +1,17 @@
+.content-header {
+    /* display: flex;
+    justify-content: center; */
+    /* margin-bottom: 50px; */
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.content-div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
