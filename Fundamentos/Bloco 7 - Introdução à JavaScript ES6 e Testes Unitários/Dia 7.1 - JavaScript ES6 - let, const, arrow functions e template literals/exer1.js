@@ -25,6 +25,7 @@ const arrDois = [];
 
 // console.log(localiza);
 const tamanho = oddsAndEvens.length;
+
 for (let index = 0; index < tamanho; index +=1) {
     
     const menorNumeroLocalizado = Math.min(...oddsAndEvens);
@@ -33,7 +34,7 @@ for (let index = 0; index < tamanho; index +=1) {
 
     const localizaPosicaoDoMenorNumber = oddsAndEvens.indexOf(Math.min(...oddsAndEvens));
     
-    console.log(oddsAndEvens.splice(localizaPosicaoDoMenorNumber, 1));
+    oddsAndEvens.splice(localizaPosicaoDoMenorNumber, 1);
     // if (localizaPosicaoDoMenorNumber > -1) {
     //   }
 
