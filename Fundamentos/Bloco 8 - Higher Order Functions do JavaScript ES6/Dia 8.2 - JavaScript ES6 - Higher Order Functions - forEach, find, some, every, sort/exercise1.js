@@ -35,7 +35,7 @@ const books = [
     genre: "Ficção Científica",
     author: {
       name: "Frank Herbert",
-      birthYear: 1920,
+      birthYear: 1920, 
     },
     releaseYear: 1965,
   },
@@ -75,15 +75,21 @@ function authorBornIn1947(year) {
 
 function smallerName() {
   let nameBook; //RECEBE NOME
+
   let result = books[0].name.length; //GUARDA O TAMANHO DO NOME DO PRIMEIRO LIVRO
+
   books.forEach((elemento) => {
+
     if (result > elemento.name.length) {
+
       result = elemento.name.length; //RESULT RECEBE TAMANHO DO LIVRO ATUAL SE A CONDIÇÃO FOR ACEITA
+
       nameBook = elemento.name; //NAMEBOOK RECEBE O NOME DO LIVRO ATUAL QUE ATENDEU A CONDIÇÃO DE SER MENOR QUE O NOME DO LIVRO ANTERIOR
     };
   });
   return nameBook;
 }
+
 // console.log(smallerName());
 
 //TESTE PARA ENTRAR DENTRO DO IF - COM SUCESSO
@@ -181,18 +187,27 @@ function smallerName() {
 function someBookWasReleaseOnThe80s() {
   return books.some((elemento) => elemento.releaseYear > 1980 && elemento.releaseYear < 1989);
 }
-
-// console.log(someBookWasReleaseOnThe80s());
-
 // 7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
 
 // const expectedResult = false;
+const rest = books.some((book) => );
+const result = 
 
-function authorUnique() {
-  return books.every((book) =>
-    !books.some((bookSome) =>
-      (bookSome.author.birthYear === book.author.birthYear)
-      && (bookSome.author.name !== book.author.name)));
-}
+console.log(rest);
 
-console.log(authorUnique());
+
+
+
+
+
+
+// const rest = books.some((book) => books.some((book2) => {
+//   if(book.name !== book2.name) {
+//     if(book.author.birthYear === book2.author.birthYear) {
+//       console.log('entrou aqui');
+//       return false;
+//     }
+//       return true
+//   }
+// }))
+

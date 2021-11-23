@@ -21,14 +21,44 @@
 
 // 3 - Utilize o find para encontrar a música com id igual a 31031685 , caso ela exista:
 
-const musicas = [
-    { id: '31031685', title: 'Partita in C moll BWV 997' },
-    { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
-    { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
-  ]
+// const musicas = [
+//     { id: '31031685', title: 'Partita in C moll BWV 997' },
+//     { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
+//     { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
+//   ]
   
-  function findMusic(id) {
-    return musicas.find((musica) => musica.id === id);
-  }
+//   function findMusic(id) {
+//     return musicas.find((musica) => musica.id === id);
+//   }
   
-  console.log(findMusic('31031687'))
+//   console.log(findMusic('31031687'))
+
+//USO DO PARAMETRO INDEX NAS HOFS
+
+const students = [
+  { name: 'Maria', grade: 70, approved: '' },
+  { name: 'José', grade: 56, approved: '' },
+  { name: 'Roberto', grade: 90, approved: '' },
+  { name: 'Ana', grade: 81, approved: '' },
+];
+
+//O INDEX É USADO -NA LINHA 49 E 51 PQ ELE QUER ALTERAR UMA PROPRIEDADE NO OBJETO, SEM O PARAMETRO INDEX ELE ADICIONARÁ MAIS UMA PROPRIEDADE;
+function verifyGrades() {
+  students.forEach((student, index) => {
+    if (student.grade >= 60) {
+      students[index].approved = 'Aprovado';
+    } else {
+      students[index].approved = 'Recuperação';
+    }
+  });
+}
+
+verifyGrades();
+
+// console.log(students);
+// [
+//   { name: 'Maria', grade: 70, approved: 'Aprovado' },
+//   { name: 'José', grade: 56, approved: 'Recuperação' },
+//   { name: 'Roberto', grade: 90, approved: 'Aprovado' },
+//   { name: 'Ana', grade: 81, approved: 'Aprovado' }
+// ]
