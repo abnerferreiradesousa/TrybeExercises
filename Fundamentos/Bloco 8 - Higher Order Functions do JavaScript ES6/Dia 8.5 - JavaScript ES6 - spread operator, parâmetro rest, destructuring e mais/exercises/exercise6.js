@@ -8,3 +8,10 @@ const chiron = ['Chiron', 'Bugatti', 2016];
 
 // escreva toObject abaixo
 
+const toObject = ([modelo, marca, ano]) => ( {
+    modelo,
+    marca,
+    ano,
+} )
+
+console.log(toObject(palio));
