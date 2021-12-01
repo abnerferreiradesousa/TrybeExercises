@@ -126,5 +126,5 @@ const books = [
   //   };
   
   function longestNamedBook() {
-    books.reduce(() => {})
+
   }
