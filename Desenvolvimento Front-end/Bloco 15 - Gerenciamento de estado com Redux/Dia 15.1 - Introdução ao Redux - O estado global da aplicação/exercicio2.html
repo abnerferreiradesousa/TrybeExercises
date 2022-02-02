@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Informações do primeiro Reducer:</h1>
+      <p>Nome: <span id="nome-1">Rodrigo</span></p>
+      <p>Sobrenome: <span id="sobrenome-1">Santos da Silva</span></p>
+      <p>Endereço: <span id="endereco-1">Rua Soldado Mathias, 765</span></p>
+      <p>Cidade: <span id="cidade-1">Belo Horizonte</span></p>
+    </div>
+    <div id="container">
+      <h1>Informações do segundo Reducer:</h1>
+      <p>Nome: <span id="nome-2">Bruna</span></p>
+      <p>Sobrenome: <span id="sobrenome-2">Santana Oliveira</span></p>
+      <p>Endereço: <span id="endereco-2">Rua Holanda, 332</span></p>
+      <p>Cidade: <span id="cidade-2">São Paulo</span></p>
+      <button id="btn">Click</button>
+    </div>
+    <script>
+      const ESTADO_INICIAL_1 = {
+        nome: 'Rodrigo',
+        sobrenome: 'Santos da Silva',
+        endereco: 'Rua Soldado Mathias, 765',
+        cidade: 'Belo Horizonte',
+      };
+
+      const ESTADO_INICIAL_2 = {
+        nome: 'Bruna',
+        sobrenome: 'Santana Oliveira',
+        endereco: 'Rua Holanda, 332',
+        cidade: 'São Paulo',
+      };
+
+      const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
+        switch (action.type) {
+          case 'NOME':
+            return {
+              ...state,
+              nome: action.nome,
+            }
+          default:
+            return state;
+        }
+      };
+
+      const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
+        switch (action.type) {
+          case 'SOBRENOME':
+            return {
+              ...state,
+              sobrenome: action.sobrenome,
+            }
+          default:
+            return state;
+        }
+      };
+
+      // 1 - Combine os reducers existentes com a função combineReducers e salve-o em uma constante.
+      const fusionReducer = Redux.combineReducers({
+          first: meuPrimeiroReducer,
+          second: meuSegundoReducer,
+        });
+      
+      const store = Redux.createStore(fusionReducer);
+
+      const firstName = () => {
+        return {
+          type: 'NOME',
+          nome: 'Abner',
+        }
+      };
+
+      const secondName = () => {
+        return {
+          type: 'SOBRENOME',
+          sobrenome: 'Ferreira',
+        }
+      };
+
+      
+      // const btn = document.querySelector('#btn');
+      
+      // addEventListener('click', () => {
+      //   store.dispatch(secondName())
+      // })
+
+      // console.log(store.getState());
+      store.subscribe(() => {
+        console.log(store.getState());
+      })
+
+      window.onload = () => {
+        console.log(store.getState());
+
+        setTimeout(() => {
+          //Seu dispatch vem aqui //
+          store.dispatch(secondName())
+        }, 3000);
+
+        setTimeout(() => {
+          store.dispatch(firstName())
+        }, 5000)
+      };
+    </script>
+  </body>
+</html>
