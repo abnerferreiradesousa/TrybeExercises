@@ -1,0 +1,7 @@
+# import chuanwen/cowsay from '/usr/games/cowsay'
+FROM chuanwen/cowsay
+
+ENTRYPOINT ["/usr/games/cowsay"]
+
+CMD "Huh... Must be that I am Abner..."
+
