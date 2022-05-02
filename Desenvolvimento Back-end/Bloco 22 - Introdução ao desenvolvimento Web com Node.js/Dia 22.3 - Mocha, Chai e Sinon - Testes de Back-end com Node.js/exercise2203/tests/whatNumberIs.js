@@ -6,5 +6,9 @@ const whatNumberIs = (num) => {
   if(numConverted < 0) return 'negativo';
   return 'o valor deve ser um número'
 };
+
+var camper = "James";
+var camper = "David";
+console.log(camper);
  
 module.exports = whatNumberIs;
