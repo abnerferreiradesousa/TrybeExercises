@@ -1,8 +1,8 @@
 import { Pool, ResultSetHeader } from 'mysql2/promise';
+// eslint-disable-next-line import/no-unresolved
 import Book from '../interfaces/book.inteface';
 
 export default class BookModel {
-
   public connection: Pool;
 
   constructor(connection: Pool) {
@@ -16,14 +16,15 @@ export default class BookModel {
   }
 
   public async create(book: Book): Promise<Book> {
-    const { title, price, author, isbn } = book;
+    const {
+      title, price, author, isbn,
+    } = book;
     const result = await this.connection.execute<ResultSetHeader>(
       'INSERT INTO books (title, price, author, isbn) VALUES (?, ?, ?, ?)',
-      [title, price, author, isbn]
+      [title, price, author, isbn],
     );
     const [dataInserted] = result;
     const { insertId } = dataInserted;
     return { id: insertId, ...book };
   }
-
 }
