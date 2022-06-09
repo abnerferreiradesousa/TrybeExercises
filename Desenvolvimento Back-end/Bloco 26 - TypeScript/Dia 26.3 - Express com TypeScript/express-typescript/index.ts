@@ -2,7 +2,7 @@
 
 import express, { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import BooksRoutes from  './routes/books.routes';
+import BooksRoutes from './routes/books.routes';
 import 'express-async-errors';
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(express.json());
 const PORT = 8000;
 
 app.get('/', (req: Request, res: Response) => {
-    res.status(StatusCodes.OK).send('Express + TypeScript')
+  res.status(StatusCodes.OK).send('Express + TypeScript');
 });
 
 app.use(BooksRoutes);
@@ -40,5 +40,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
