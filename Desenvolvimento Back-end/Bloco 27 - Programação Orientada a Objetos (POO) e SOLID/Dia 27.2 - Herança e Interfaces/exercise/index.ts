@@ -1,3 +1,24 @@
+
+interface MyInterface {
+  myNumber: number;
+  myFunc(myParam: number): string;
+}
+
+class MyClass implements MyInterface {
+  constructor(public myNumber: number) {
+    
+  }
+
+  myFunc(myParam: number): string {
+      return (myParam + this.myNumber).toString()
+  }
+}
+
+const obj = new MyClass(22);
+// console.log(obj.myFunc(50));
+
+
+//=========================================================
 class Superclass {
   isSuper: boolean;
 
@@ -25,5 +46,5 @@ const myFunc = (value: Superclass) => {
   return value.sayHello();
 }
 
-myFunc(sub)
-myFunc(sup)
+// myFunc(sub)
+// myFunc(sup)
